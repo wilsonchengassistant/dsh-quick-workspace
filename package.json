@@ -1,0 +1,46 @@
+{
+  "name": "dsh-quick-workspace",
+  "version": "1.0.0",
+  "description": "Make the sidebar's Add workspace button work in a remote browser: prompt for a folder name and create it next to the current workspace, instead of opening a native OS chooser on the host machine.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsonchengassistant/dsh-quick-workspace.git"
+  },
+  "homepage": "https://github.com/wilsonchengassistant/dsh-quick-workspace#readme",
+  "bugs": "https://github.com/wilsonchengassistant/dsh-quick-workspace/issues",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "workspace"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-primitives",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "files": [
+    "cordis.patch.yml",
+    "lib/index.js",
+    "lib/client.js"
+  ]
+}
