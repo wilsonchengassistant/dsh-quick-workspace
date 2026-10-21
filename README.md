@@ -24,6 +24,10 @@ It occupies both directory-flow holes — the sidebar header button and the comp
 2. the dialog shows the exact path it is about to create,
 3. DSH makes the folder and registers it as a workspace, then opens it.
 
+![The name dialog, showing the exact path it is about to create](docs/new-workspace-dialog.png)
+
+![The new workspace registered in the sidebar and opened](docs/new-workspace-created.png)
+
 New folders land **beside the deployment's default workspace**, which on this machine is
 `~/Documents/deepseek-harness/` for a workspace at `~/Documents/deepseek-harness/default-workspace`.
 
