@@ -44,6 +44,17 @@ dsh plugin --profile web add file:/path/to/plugins/dsh-quick-workspace
 
 Then restart `dsh web` so the host half re-imports (see below).
 
+## Languages
+
+The dialog ships in **English and Simplified Chinese** (`zh`), registered as
+`ctx.locale.register("quickWorkspace", { zh, en })` — 12 keys each, kept parallel.
+
+Traditional Chinese comes from the separate [`dsh-zh-hant`](https://github.com/wilsonchengassistant/dsh-zh-hant)
+pack, which converts every bundle's `zh` dictionary to Traditional with OpenCC. The
+`zh` dictionary here is therefore **Simplified on purpose**: writing Traditional into
+it would make Simplified users read Traditional text, and it would turn the zh-Hant
+conversion into a no-op instead of the reverse of this table.
+
 ## Two things that bite when editing this
 
 - **`lib/index.js` needs a `dsh web` restart.** The client half hot-reloads; the host half

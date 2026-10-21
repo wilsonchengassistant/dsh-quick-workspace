@@ -1,6 +1,6 @@
 {
   "name": "dsh-quick-workspace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make the sidebar's Add workspace button work in a remote browser: prompt for a folder name and create it next to the current workspace, instead of opening a native OS chooser on the host machine.",
   "license": "MIT",
   "type": "module",
